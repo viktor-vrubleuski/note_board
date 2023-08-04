@@ -16,7 +16,7 @@ async def verify_note_id_and_board_id(
     note = await NoteRepository.get_note(id, note_id)
 
     if not note:
-        raise HTTPException(status_code=404, detail="Board not found")
+        raise HTTPException(status_code=404, detail="Note not found")
 
 
 @router.post(
